@@ -52,13 +52,14 @@ def subdivide_line_minus(length, level):
 
 
 initial_length = 400.0
-colors = ["red", "blue", "green", "purple", "cyan", "black"]
+colors = ["red", "blue", "green", "purple"]
+init_depth = 0
 
 for depth, color in enumerate(colors):
     turtle.pencolor(color)
     turtle.penup()
     turtle.goto(-200, -50)
     turtle.pendown()
-    subdivide_line_plus(initial_length, depth)
+    subdivide_line_plus(initial_length, depth + init_depth)
 
 turtle.done()
